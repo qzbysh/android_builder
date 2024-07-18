@@ -21,7 +21,6 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-          cache: gradle
           
       - id: get-project
         name: Get project name
