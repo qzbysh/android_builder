@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
         
       - uses: nttld/setup-ndk@v1
         id: setup-ndk
