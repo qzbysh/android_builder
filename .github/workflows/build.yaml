@@ -24,7 +24,7 @@ jobs:
           
       - id: get-project
         name: Get project name
-        run: echo "{name}={PROJECT::$(cat project-to-build)}" >> $GITHUB_OUTPUT
+        run: echo "PROJECT=${cat project-to-build}" >> $GITHUB_OUTPUT
         
       - name: Clone project
         run: git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project
