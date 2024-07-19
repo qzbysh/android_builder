@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@something
         
       - uses: nttld/setup-ndk@v1
         id: setup-ndk
@@ -24,7 +24,7 @@ jobs:
           
       - id: get-project
         name: Get project name
-        run: echo "PROJECT=${cat project-to-build}" >> $GITHUB_OUTPUT
+        run: echo "PROJECT=$(cat project-to-build)" >> $GITHUB_OUTPUT
         
       - name: Clone project
         run: git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project
